@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,700');
+
+body,html{
+	font-family: 'Montserrat', sans-serif;
+	height: 100%;
+	margin: 0;
+}
+
+body{
+	background: #f4f4f4 url('../images/candlebg.png');
+	background-size: cover;
+}
+
+#home-container{
+	display: grid;
+	grid-template-columns: .5fr 1fr 1fr .5fr;
+	grid-gap: 10px;
+	grid-template-areas: ". left right .";
+	height: 100%;
+}
+
+#inner{
+	grid-area: left;
+	align-self: center;
+	justify-self: center;
+}
+
+#illustration{
+	grid-area: right;
+	align-self: center;
+	justify-self: center;	
+}
+
+img#logo{
+	width: 130px;
+	margin-bottom: 1.6em; 
+}
+
+h1{
+	text-transform: uppercase;
+	color: #535353;
+	margin-bottom: .2em;
+}
+
+p.subtitle{
+	font-size: 1.4em;
+	color: #858585;
+	margin-top: 0;
+}
+
+.cta{
+	background-color:  #00ffc4;
+	padding: 1em;
+	color: white;
+	font-weight: bold;
+	margin-top: 2em;
+	display: inline-block;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+#monitor{
+	height:250px;
+	animation: monitorIn 1s ease-in-out forwards;
+	opacity: 0;
+}
+
+@keyframes monitorIn{
+	from{
+		transform: translateY(-30px);
+		opacity: 0;
+	}
+	to{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
